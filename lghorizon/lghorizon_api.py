@@ -116,7 +116,7 @@ class LGHorizonApi:
         try:
             login_session = Session()
             ####################################
-            _logger.debug("Step 1 - Get Authorization data")
+            _logger.debug("Step 1 - Get Authorization data...")
             auth_url = f"{self._country_settings['oesp_url']}/authorization"
             auth_response = login_session.get(auth_url)
             if not auth_response.ok:
