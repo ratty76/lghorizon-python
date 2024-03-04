@@ -281,7 +281,7 @@ class LGHorizonApi:
         self._session.headers["x-oesp-username"] = self._auth.username
 
         mqtt_response = self._do_api_call(
-            f"{self._country_settings['oesp_url']}/tokens/jwt"
+            f"{self._country_settings['oesp_url']}/auth-service/v1/mqtt/token"
         )
         self._auth.mqttToken = mqtt_response["token"]
         _logger.debug(f"MQTT token: {self._auth.mqttToken}")
